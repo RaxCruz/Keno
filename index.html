@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <script src="matter.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <title>Document</title>
+</head>
+
+<body class="flex  max-w-[1500px] mx-auto bg-[#14151f] h-screen p-5 relative">
+
+  <canvas class="w-0 h-0"></canvas>
+
+  <div class="absolute inset-0   flex justify-center items-center hidden bg-[#000000E6]" id="hintSection">
+    <div class="h-[50%] w-[80%] bg-black border border-1 border-white">
+      <h1 class="text-white font-bold text-2xl text-yellow-500">注意</h1>
+      <p class="text-white font-bold text-2xl text-center">請使用橫向模式進行瀏覽</p>
+    </div>
+  </div>
+  <!-- 整個面板 -->
+  <div class="flex flex-col bg-[#14151f] w-full justify-center" id="gameSection">
+    <!-- 上方 -->
+    <div class="flex w-full h-2/3">
+      <!-- 得獎資訊 -->
+      <div class="flex items-center justify-center w-2/6 h-full bg-[#14151f] ">
+        <div class="h-[90%] w-[90%] bg-black rounded-sm border border-2 border-black text-white">
+          <ul class="p-3 h-full">
+            <li class="flex justify-between font-bold text-yellow-500 h-[9%] items-center">
+              <div>HITS</div>
+              <div>COINS</div>
+            </li>
+            <li class="flex justify-between h-[9%] items-center">
+              <div>1</div>
+              <div class="coin">-</div>
+            </li>
+            <li class="flex justify-between h-[9%] items-center">
+              <div>2</div>
+              <div class="coin">-</div>
+            </li>
+            <li class="flex justify-between h-[9%] items-center">
+              <div>3</div>
+              <div class="coin">-</div>
+            </li>
+            <li class="flex justify-between h-[9%] items-center">
+              <div>4</div>
+              <div class="coin">-</div>
+            </li>
+            <li class="flex justify-between h-[9%] items-center">
+              <div>5</div>
+              <div class="coin">-</div>
+            </li>
+            <li class="flex justify-between h-[9%] items-center">
+              <div>6</div>
+              <div class="coin">-</div>
+            </li>
+            <li class="flex justify-between h-[9%] items-center">
+              <div>7</div>
+              <div class="coin">-</div>
+            </li>
+            <li class="flex justify-between h-[9%] items-center">
+              <div>8</div>
+              <div class="coin">-</div>
+            </li>
+            <li class="flex justify-between h-[9%] items-center">
+              <div>9</div>
+              <div class="coin">-</div>
+            </li>
+            <li class="flex justify-between h-[9%] items-center">
+              <div>10</div>
+              <div class="coin">-</div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      <!-- 選號 -->
+      <div class="flex items-center justify-center w-4/6 h-full bg-[#14151f]">
+        <div class="flex flex-wrap h-[90%] w-[90%] " id="NumberPickedSection">
+
+        </div>
+      </div>
+    </div>
+    <!-- 下方 -->
+    <div class="flex items-center justify-center w-full h-24 bg-[#14151f]">
+      <div class="flex  items-center h-[90%] w-[100%]">
+        <div class="basis-1/3 flex justify-center">
+          <button class="bg-black-500 border rounded-lg w-[90%] h-12 text-white" id="gameStart">開始</button>
+        </div>
+        <div class="basis-2/3 flex justify-center space-x-10">
+          <button class="bg-black-500 border rounded-lg w-1/3 h-12 text-white" id="clearButton">清除</button>
+          <button class="bg-black-500 border rounded-lg w-1/3 h-12 text-white" id="randomPickedButton">隨機選取</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="">
+
+  </div>
+  <script src="main.js"></script>
+  <script src="index.js"></script>
+
+</body>
+
+</html>
